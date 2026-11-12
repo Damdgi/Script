@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en JavaScript</title>
+</head>
+<body>
+    
+    <h2 id="titulo">Hola</h2>
+    <button id="boton">Cambiar texto</button>
+
+    <script>
+    function saludar(){
+        alert("¡Hola Mundo!");
+    }
+    //función declarada
+    function saludar(){
+         alert("¡Hola, estudiantes!");
+    }
+    saludar();
+
+    //funcion con parametros
+
+    function saluda(nombre){
+        alert("Hola, "+ nombre);
+    }
+    saluda("Bonny");
+    saluda("Damian");
+
+    //funcion retorno(return)
+    function sumar(a,b){
+        return a+b;
+    }
+    let resultado = sumar(5,3);
+    alert(resultado);
+
+    //funcion anonima (const)
+    const despedir = function(){
+        alert("¡Hasta pronto!");
+    };
+    despedir();
+
+    //funcion flecha(const)
+    const multiplicar =(c,d)=>{
+        return c*d;
+    };
+    alert(multiplicar(4,3));
+    
+    //funcion ejecutada mediante un evento
+    const boton = document.getElementById("boton");
+    const titulo = document.getElementById("titulo");
+
+    boton.addEventListener("click", function(){
+        titulo.textContent = "Estoy aprendiendo JavaScript!";
+    });
+
+    //funcion recursiva 
+    function cuentaRegresiva(numero){
+        if(numero <=0){
+            console.log("¡Despegue!");
+            return;
+        }
+        console.log(numero);
+        cuentaRegresiva(numero-1);
+    }
+    cuentaRegresiva(3);
+    </script>
+    
+   
+  
+</body>
+</html>

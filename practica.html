@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+    header .icon {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    section {
+      max-width: 700px;
+      margin: 20px auto;
+      border-radius: 8px;
+      padding: 15px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .innerHTML {
+      background: #f9d1d9;
+    }
+    .getElementById {
+      background: #d3f0d7;
+    }
+    .querySelector {
+      background: #d6ccf5;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    p, button {
+      font-size: 1.1em;
+    }
+    button {
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #555;
+      color: white;
+      transition: background 0.3s;
+    }
+    button:hover:not(:disabled) {
+      background: #333;
+    }
+    #imagenft img {
+      max-width: 100px;
+      margin-top: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="icon">Bienvenido</div>
+  <h1>Práctica</h1>
+</header>
+
+<section class="innerHTML">
+  <h2>innerHTML</h2>
+  <p id="mensaje">Hola mundo</p>
+  <button id="btnTexto">Cambiar texto</button>
+  
+  <div id="imagenft"></div>
+  <button id="btnImagen">Agregar imagen</button>
+</section>
+
+<section class="getElementById">
+  <h2>document.getElementById()</h2>
+  <p id="aviso">Mensaje inicial</p>
+  <button id="btnCambiarAviso">Mostrar mensaje</button>
+  <br />
+  <button id="btn" style="margin-top:15px;">Haz clic</button>
+  <button id="btnColor">Cambiar color botón</button>
+</section>
+
+<section class="querySelector">
+  <h2>querySelector()</h2>
+  <p class="destacado">Texto importante</p>
+  <button id="btnColorRojo">Poner texto en rojo</button>
+  <br/>
+  <button class="btn" style="margin-top: 15px;">Enviar</button>
+  <button id="btnDeshabilitar">Deshabilitar botón</button>
+</section>
+
+<script>
+  
+  document.getElementById("btnTexto").onclick = function() {
+    document.getElementById("mensaje").innerHTML = "¡Bienvenido!";
+  };
+  document.getElementById("btnImagen").onclick = function() {
+    document.getElementById("imagen").innerHTML = '<img src="imagenft.jpg" alt="Imagen">';
+  };
+
+
+  document.getElementById("btnCambiarAviso").onclick = function() {
+    var elemento = document.getElementById("aviso");
+    elemento.textContent = "Hola Estudiantes";
+  };
+  document.getElementById("btnColor").onclick = function() {
+    document.getElementById("btn").style.backgroundColor = "blue";
+    document.getElementById("btn").style.color = "white";
+  };
+
+  
+  document.getElementById("btnColorRojo").onclick = function() {
+    document.querySelector(".destacado").style.color = "red";
+  };
+  document.getElementById("btnDeshabilitar").onclick = function() {
+    document.querySelector(".btn").disabled = true;
+    document.querySelector(".btn").style.backgroundColor = "#888";
+    document.querySelector(".btn").style.color = "#ccc";
+    document.querySelector(".btn").textContent = "Botón deshabilitado";
+  };
+</script>
+
+</body>
+</html>

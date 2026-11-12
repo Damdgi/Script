@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Signos Zodiacales</h1>
+
+    <script>
+        let fecha = prompt("Ingresa tu fecha de nacimiento en formato DD/MM (Ejemplo 13/06)");
+
+        let partes = fecha.split("/");
+        let dia = parseInt(partes[0]);
+        let mes = parseInt(partes[1]);
+
+        switch(true){
+
+            // Enero/Diciembre
+            case (mes==1 && dia>=1 && dia<=19):
+            case (mes==12 && dia>=22 && dia<=31):
+            document.write("<h2>Capricornio</h2>");
+            document.write("<p>Caracteristicas: Disciplina, perseverancia y responsabilidad</p>");
+            break;
+
+            // Enero/Febrero
+            case (mes==1 && dia>=20 && dia<=31):
+            case (mes==2 && dia>=1 && dia<=18):
+            document.write("<h2>Acuario</h2>");
+            document.write("<p>Características: Independencia, originalidad e inteligencia.</p>");
+            break;
+
+            // Febrero/Marzo
+            case (mes==2 && dia>=19 && dia<=29):
+            case (mes==3 && dia>=1 && dia<=20):
+            document.write("<h2>Piscis</h2>");
+            document.write("<p>Características: Sensibilidad, creatividad y empatía.</p>");
+            break;
+
+            // Marzo/Abril
+            case (mes==3 && dia>=21 && dia<=31):
+            case (mes==4 && dia>=1 && dia<=19):
+            document.write("<h2>Aries</h2>");
+            document.write("<p>Características: Valentía, energía y determinación.</p>");
+            break;
+
+            // Abril/Mayo
+            case (mes==4 && dia>=20 && dia<=30):
+            case (mes==5 && dia>=1 && dia<=20):
+            document.write("<h2>Tauro</h2>");
+            document.write("<p>Características: Paciencia, estabilidad y lealtad.</p>");
+            break;
+
+            // Mayo/Junio
+            case (mes==5 && dia>=21 && dia<=31):
+            case (mes==6 && dia>=1 && dia<=20):
+            document.write("<h2>Géminis</h2>");
+            document.write("<p>Características: Curiosidad, comunicación y adaptabilidad.</p>");
+            break;
+
+            // Junio/Julio
+            case (mes==6 && dia>=21 && dia<=30):
+            case (mes==7 && dia>=1 && dia<=22):
+            document.write("<h2>Cáncer</h2>");
+            document.write("<p>Características: Emotividad, protección y sensibilidad.</p>");
+            break;
+
+            // Julio/Agosto
+            case (mes==7 && dia>=23 && dia<=31):
+            case (mes==8 && dia>=1 && dia<=22):
+            document.write("<h2>Leo</h2>");
+            document.write("<p>Características: Liderazgo, confianza y orgullo.</p>");
+            break;
+
+            // Agosto/Septiembre
+            case (mes==8 && dia>=23 && dia<=31):
+            case (mes==9 && dia>=1 && dia<=22):
+            document.write("<h2>Virgo</h2>");
+            document.write("<p>Características: Organización, análisis y perfeccionismo.</p>");
+            break;
+
+            // Septiembre/Octubre
+            case (mes==9 && dia>=23 && dia<=30):
+            case (mes==10 && dia>=1 && dia<=22):
+            document.write("<h2>Libra</h2>");
+            document.write("<p>Características: Equilibrio, justicia y armonía.</p>");
+            break;
+
+            // Octubre/Noviembre
+            case (mes==10 && dia>=23 && dia<=31):
+            case (mes==11 && dia>=1 && dia<=21):
+            document.write("<h2>Escorpio</h2>");
+            document.write("<p>Características: Intensidad, pasión y determinación.</p>");
+            break;
+
+            // Noviembre/Diciembre
+            case (mes==11 && dia>=22 && dia<=30):
+            case (mes==12 && dia>=1 && dia<=21):
+            document.write("<h2>Sagitario</h2>");
+            document.write("<p>Características: Optimismo, aventura y libertad.</p>");
+            break;
+
+            default:
+            document.write("<h2>Fecha no válida</h2>");
+            document.write("<p>Verifica el día y el mes que ingresaste.</p>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operaciones basicas</h1>
+    <script>
+        let n1=Number(prompt("Ingresa el primer número "));
+        let n2=Number(prompt("Ingresa el segundo número "));
+
+        let opcion=(prompt("Con letra minuscula ingresa alguna de las  siguiente operaciones "+ "suma/resta/multiplicacion/division"));
+
+        switch(opcion){
+            case 'suma':
+                let suma=n1+n2;
+                document.write("El resultado de la suma es: "+suma);
+                break;
+
+                case 'resta':
+                let resta=n1-n2;
+                document.write("El resultado de la resta es: "+resta);
+                break;
+
+                case 'multiplicacion':
+                let multiplicacion=n1*n2;
+                document.write("El resultado de la multiplicacion es: "+multiplicacion);
+                break;
+
+                case 'division':
+                let division=n1/n2;
+                document.write("El resultado de la division es: "+division);
+                break;
+
+                defaultdocument.write("Opción no válida");
+        }
+    </script>
+    
+</body>
+</html>
